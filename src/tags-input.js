@@ -92,6 +92,10 @@ tagsInput.directive('tagsInput', function($timeout, $document, tagsInputConfig) 
             return tag;
         };
 
+        self.removeAll = function(){
+            self.items.splice(0,self.items.length);
+        };
+
         self.removeLast = function() {
             var tag, lastTagIndex = self.items.length - 1;
 
@@ -124,7 +128,9 @@ tagsInput.directive('tagsInput', function($timeout, $document, tagsInputConfig) 
         },
         replace: false,
         transclude: true,
-        templateUrl: 'ngTagsInput/tags-input.html',
+        templateUrl: function (element, attrs) {
+            return attrs.template ? attrs.template : 'ngTagsInput/auto-complete.html';
+        },
         controller: function($scope, $attrs, $element) {
             $scope.events = new SimplePubSub();
 
@@ -150,6 +156,11 @@ tagsInput.directive('tagsInput', function($timeout, $document, tagsInputConfig) 
             });
 
             $scope.tagList = new TagList($scope.options, $scope.events);
+
+            $scope.removeAll = function(){
+                $scope.newTag.text = '';
+                $scope.tagList.removeAll();
+            };
 
             this.registerAutocomplete = function() {
                 var input = $element.find('input');

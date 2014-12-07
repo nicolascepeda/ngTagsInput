@@ -1,3 +1,13 @@
+## 2.2.0 (2014-12-07)
+
+#### Features
+
+* **autoComplete:** Add autoSelectFirstSuggestion option ([0993bbdf](https://github.com/mbenford/ngTagsInput/commit/0993bbdf5ac85f0af5e62c5fa76c13a2aecfa0c7), [#136](https://github.com/mbenford/ngTagsInput/issues/136))
+* **autocomplete:** Remove requirement for the source option to return a promise ([10932fbb](https://github.com/mbenford/ngTagsInput/commit/10932fbb18b0887927ae71bb1f9e1d1d0f0f4e26), [#237](https://github.com/mbenford/ngTagsInput/issues/237))
+* **tagsInput:**
+  * Add onInvalidTag option ([e5c57b8e](https://github.com/mbenford/ngTagsInput/commit/e5c57b8ec77b4840e6f383e0bee9a0ce2f6ff0dc))
+  * Enable ngFocus and ngBlur native directives ([210b86f7](https://github.com/mbenford/ngTagsInput/commit/210b86f74538564adcabd0ab22522866888acad8))
+
 ## 2.1.1 (2014-09-04)
 
 #### Bug Fixes
