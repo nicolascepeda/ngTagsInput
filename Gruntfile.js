@@ -110,8 +110,8 @@ module.exports = function(grunt) {
         'compress',
         'changelog',
         'replace:changelog',
-        'shell:git',
-        //'copy:bower',
+        //'shell:git'
+        'copy:bower',
         //'update-bower-version',
         //'shell:git_bower'
     ]);

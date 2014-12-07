@@ -4,7 +4,6 @@ module.exports = {
             expand: true,
             flatten: true,
             src: ['build/*.js', 'build/*.css'],
-            dest: '<%= bowerDirectory %>',
             filter: 'isFile'
         }]
     },

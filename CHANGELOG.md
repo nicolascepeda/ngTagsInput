@@ -2,6 +2,8 @@
 
 ## 2.2.0 (2014-12-07)
 
+## 2.2.0 (2014-12-07)
+
 #### Features
 
 * **autoComplete:** Add autoSelectFirstSuggestion option ([0993bbdf](https://github.com/mbenford/ngTagsInput/commit/0993bbdf5ac85f0af5e62c5fa76c13a2aecfa0c7), [#136](https://github.com/mbenford/ngTagsInput/issues/136))
