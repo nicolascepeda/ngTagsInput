@@ -111,7 +111,7 @@ module.exports = function(grunt) {
         'changelog',
         'replace:changelog',
         //'shell:git'
-        'copy:bower',
+        'copy:bower'
         //'update-bower-version',
         //'shell:git_bower'
     ]);

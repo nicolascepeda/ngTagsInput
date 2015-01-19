@@ -2,10 +2,10 @@
  * ngTagsInput v2.2.0
  * http://mbenford.github.io/ngTagsInput
  *
- * Copyright (c) 2013-2014 Michael Benford
+ * Copyright (c) 2013-2015 Michael Benford
  * License: MIT
  *
- * Generated at 2014-12-07 13:07:44 +0100
+ * Generated at 2015-01-19 15:11:45 +0100
  */
 (function() {
 'use strict';
@@ -250,6 +250,10 @@ tagsInput.directive('tagsInput', ["$timeout","$document","tagsInputConfig", func
             $scope.removeAll = function(){
                 $scope.newTag.text = '';
                 $scope.tagList.removeAll();
+            };
+
+            $scope.remove = function(index){
+                $scope.tagList.remove(index);
             };
 
             this.registerAutocomplete = function() {

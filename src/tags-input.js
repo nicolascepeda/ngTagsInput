@@ -162,6 +162,10 @@ tagsInput.directive('tagsInput', function($timeout, $document, tagsInputConfig) 
                 $scope.tagList.removeAll();
             };
 
+            $scope.remove = function(index){
+                $scope.tagList.remove(index);
+            };
+
             this.registerAutocomplete = function() {
                 var input = $element.find('input');
                 input.on('keydown', function(e) {
