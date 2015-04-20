@@ -215,6 +215,7 @@ tagsInput.directive('autoComplete', function($document, $timeout, $sce, $q, tags
                     }
                 })
                 .on('input-keydown', function(e) {
+                    scope.hasFocus = true;
                     // This hack is needed because jqLite doesn't implement stopImmediatePropagation properly.
                     // I've sent a PR to Angular addressing this issue and hopefully it'll be fixed soon.
                     // https://github.com/angular/angular.js/pull/4833
