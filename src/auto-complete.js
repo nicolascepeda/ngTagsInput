@@ -134,6 +134,8 @@ tagsInput.directive('autoComplete', function($document, $timeout, $sce, $q, tags
             tagsInput = tagsInputCtrl.registerAutocomplete();
             options.tagsInput = tagsInput.getOptions();
 
+            scope.isLoading = true;
+
             function search($query){
                 scope.isLoading = true;
                 return scope.source($query).then(function(a){
