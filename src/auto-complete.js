@@ -195,6 +195,7 @@ tagsInput.directive('autoComplete', function($document, $timeout, $sce, $q, tags
             tagsInput
                 .on('tag-added tag-removed invalid-tag input-blur', function() {
                     scope.hasFocus = false;
+                    scope.isLoading = true;
                     $timeout(function(){
                         suggestionList.reset();
                     }, 200);
@@ -209,6 +210,7 @@ tagsInput.directive('autoComplete', function($document, $timeout, $sce, $q, tags
                 })
                 .on('input-focus', function() {
                     scope.hasFocus = true;
+                    scope.isLoading = true;
                     var value = tagsInput.getCurrentTagText();
                     if (options.loadOnFocus && shouldLoadSuggestions(value)) {
                         suggestionList.load(value, tagsInput.getTags());
