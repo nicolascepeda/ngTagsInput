@@ -501,10 +501,10 @@ tagsInput.directive('autoComplete', ["$document","$timeout","$sce","$q","tagsInp
                 lastPromise = promise;
 
                 promise.then(function(items) {
-                    if (promise !== lastPromise) {
+/*                    if (promise !== lastPromise) {
                         return;
                     }
-
+*/
                     items = makeObjectArray(items.data || items, options.tagsInput.displayProperty);
                     items = getDifference(items, tags);
                     self.items = items.slice(0, options.maxResultsToShow);
